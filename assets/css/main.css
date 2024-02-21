@@ -337,16 +337,6 @@ label {
   .image__border {
     display: none;
   }
-
-  .mobilebackground {
-    display: block;
-    position: absolute;
-    height: 100dvh;
-    object-fit: cover;
-    z-index: 1;
-    right: -35px;
-    bottom: 0;
-  }
 }
 
 /*===== All Button Style =====*/
@@ -854,6 +844,7 @@ label {
   position: relative;
   height: 100dvh;
   background-color: #f7faff;
+  overflow: hidden;
 }
 
 .flag {
@@ -1054,9 +1045,6 @@ label {
   .feature-section .feature-wrapper {
     border-top-left-radius: 150px;
     padding: 90px 0px;
-  }
-  .flag {
-    display: none;
   }
 }
 
@@ -1840,11 +1828,9 @@ label {
 ============================= */
 .footer {
   position: relative;
-  z-index: 1;
-  background-image: url("../images/footer/footer-bg.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  z-index: 100;
+
+  background-color: #70a6cd;
 }
 
 .footer .footer-widget {
@@ -2662,3 +2648,33 @@ label {
   justify-content: center;
   margin: 140px 0;
 }
+@media screen and (max-width: 1100px) {
+  .mobilebackground {
+    display: block;
+    position: absolute;
+    height: 100dvh;
+    object-fit: contain;
+    right: -30px;
+    z-index: 1;
+
+    bottom: 0;
+  }
+  .flag {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1560px) {
+  .image__border {
+    width: 460px !important;
+  }
+  .flag{
+    width: 1200px;
+    height: auto !important;
+  }
+  .hero-section{ 
+    height: auto !important;
+  }
+}
+
+
